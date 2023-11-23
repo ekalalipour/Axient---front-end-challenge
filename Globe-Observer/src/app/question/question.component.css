@@ -152,3 +152,29 @@
   /* Extra padding when the icon is not shown */
   padding: 10px 20px 10px 30px; /* Adjust as necessary */
 }
+
+@media (max-width: 800px) {
+  .welcome-screen {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .data-entry-logo {
+    max-width: 40%; /* Adjust the size of the logo */
+    max-height: 40%;
+  }
+
+  .magnifying-glass {
+    max-width: 20%; /* Adjust the size of the magnifying glass */
+    height: auto;
+    margin-left: 10px;
+    /* margin-bottom: -10px; */
+  }
+}

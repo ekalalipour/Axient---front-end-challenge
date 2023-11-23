@@ -135,3 +135,25 @@
 .feature-group-color label {
   margin-right: 10px; /* Add space between the label and the color picker */
 }
+
+.texture-description {
+  margin-top: 20px; /* Space above the texture description */
+  text-align: center;
+  font-size: var(--font-size); /* Adjust font size as needed */
+}
+
+.feature-group-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Space between the texture checkboxes and the color picker */
+  font-size: var(--font-size);
+}
+
+@media (max-width: 800px) {
+  .result-screen {
+    width: 100%; /* Stretch the `.result-screen` to full width on smaller screens */
+    padding: 20px; /* Adjust padding to maintain consistency */
+  }
+}
+

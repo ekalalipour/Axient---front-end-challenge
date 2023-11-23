@@ -13,32 +13,14 @@
     <h2 class="leaf-name">You found a <span class="uppercase">{{ leafName }}</span> LEAF!</h2>
   </section>
   <div class="grey-bar"></div>
-  <!-- <section class="additional-identification">
-    <h3>Additional Leaf Details</h3>
-    <div *ngFor="let texture of leafTextures" class="feature-group">
-      <label [for]="texture">{{ texture }}</label>
-      <input 
-        type="checkbox" 
-        [id]="texture" 
-        (change)="onTextureChange(texture, $event)">
-    </div>
-    <div class="feature-group">
-      <label for="leafColor">Select Leaf Color:</label>
-      <input 
-        type="color" 
-        id="leafColor" 
-        [(ngModel)]="leafColor">
-    </div>
-  </section> -->
   <section class="additional-identification">
-    <h3>Additional Leaf Details</h3>
-    
+    <h2>Additional Leaf Details</h2>
     <!-- Leaf Textures -->
+    <p class="texture-description">Select the Leaf Texture:</p>
     <div *ngFor="let texture of leafTextures" class="feature-group-checkbox">
       <input type="checkbox" [id]="texture" (change)="onTextureChange(texture, $event)">
       <label [for]="texture">{{ texture }}</label>
     </div>
-  
     <!-- Leaf Color Picker -->
     <div class="feature-group-color">
       <label for="leafColor">Select Leaf Color:</label>
