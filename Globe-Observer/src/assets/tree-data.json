@@ -1,0 +1,59 @@
+{
+  "question": "Does your leaf sample have needle-like leaves?",
+  "options": [
+    {
+      "type": "No",
+      "question": "Does your leaf sample have compound arrangement?",
+      "options": [
+        {
+          "type": "Yes",
+          "species": "Walnut",
+          "img": "leaves/walnut.png"
+        },
+        {
+          "type": "No",
+          "question": "Does your leaf sample have lobed leaves?",
+          "options": [
+            {
+              "type": "No",
+              "species": "Elm",
+              "img": "leaves/elm.png"
+            },
+            {
+              "type": "Yes",
+              "question": "Does your leaf sample have triangular leaves?",
+              "options": [
+                {
+                  "type": "Yes",
+                  "species": "Maple",
+                  "img": "leaves/maple.png"
+                },
+                {
+                  "type": "No",
+                  "species": "Oak",
+                  "img": "leaves/oak.png"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Yes",
+      "question": "Does your leaf sample have long-thin needles?",
+      "options": [
+        {
+          "type": "Yes",
+          "species": "Pine",
+          "img": "leaves/pine.png"
+        },
+        {
+          "type": "No",
+          "species": "Spruce",
+          "img": "leaves/spruce.png"
+        }
+      ]
+    }
+  ]
+}

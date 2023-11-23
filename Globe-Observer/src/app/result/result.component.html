@@ -1,0 +1,55 @@
+<article class="result-screen">
+  <header class="header-container">
+    <img src="../../assets/logos/data-entry-logo.png" alt="Data Entry Logo" class="data-entry-logo">
+    <img src="../../assets/logos/mag-logo.png" alt="Magnifying Glass" class="magnifying-glass">
+  </header>
+  <section class="leaf-container">
+    <img src="../../assets/logos/leaf-icon.png" alt="Leaf Icon" class="leaf-logo">
+    <h1 class="leaf-identification">Leaf Identification Wizard</h1>
+  </section>
+  <section class="result-container">
+    <h1 class="congratulations-text">Congratulations!</h1>
+    <img src="../../assets/{{ leafImage }}" alt="Leaf Image" class="leaf-image">
+    <h2 class="leaf-name">You found a <span class="uppercase">{{ leafName }}</span> LEAF!</h2>
+  </section>
+  <div class="grey-bar"></div>
+  <!-- <section class="additional-identification">
+    <h3>Additional Leaf Details</h3>
+    <div *ngFor="let texture of leafTextures" class="feature-group">
+      <label [for]="texture">{{ texture }}</label>
+      <input 
+        type="checkbox" 
+        [id]="texture" 
+        (change)="onTextureChange(texture, $event)">
+    </div>
+    <div class="feature-group">
+      <label for="leafColor">Select Leaf Color:</label>
+      <input 
+        type="color" 
+        id="leafColor" 
+        [(ngModel)]="leafColor">
+    </div>
+  </section> -->
+  <section class="additional-identification">
+    <h3>Additional Leaf Details</h3>
+    
+    <!-- Leaf Textures -->
+    <div *ngFor="let texture of leafTextures" class="feature-group-checkbox">
+      <input type="checkbox" [id]="texture" (change)="onTextureChange(texture, $event)">
+      <label [for]="texture">{{ texture }}</label>
+    </div>
+  
+    <!-- Leaf Color Picker -->
+    <div class="feature-group-color">
+      <label for="leafColor">Select Leaf Color:</label>
+      <input type="color" id="leafColor" [(ngModel)]="leafColor">
+    </div>
+</section>
+
+  <div class="grey-bar"></div>
+  <footer class="button-container">
+    <button type="button" class="btn btn-grey" (click)="restart()">Restart</button>
+    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+  </footer>
+</article>
+

@@ -1,0 +1,137 @@
+.result-screen {
+  max-width: 800px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.header-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.result-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.congratulations-text {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.leaf-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.leaf-name {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.grey-bar {
+  height: 3px;
+  background-color: var(--grey-bar-color);
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: var(--font-size);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-grey {
+  background-color: var(--grey-button);
+}
+
+.btn-primary {
+  background-color: var(--button-bg-color);
+}
+
+.leaf-logo {
+  padding: 1.5rem;
+  margin-right: 10px; 
+  padding-left: 10px;
+}
+
+.leaf-container {
+  height: 64px; /* Total height including padding */
+  background-color: var(--primary-bg-color);
+  display: flex;
+  align-items: center; /* Centers the leaf logo vertically within the banner */
+  justify-content: start; /* Aligns the leaf logo to the start of the container */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 1.5rem;
+  margin-bottom: 48px;
+}
+
+.leaf-identification {
+  font-size: 1.25rem; /* 20px if 1rem is 16px */
+  line-height: 1.2;
+  color: var(--button-text-color);
+  background-color: var(--primary-bg-color);
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+}
+
+.magnifying-glass {
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+
+/* Additional Leaf Details Section */
+.additional-identification {
+  
+  text-align: center;
+  font-size: var(--font-size); /* Assuming you have a font size variable */
+  margin: 20px 0; /* Add some space below the section */
+}
+
+.additional-identification .feature-group-checkbox {
+  display:inline-table ;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 10px; 
+}
+
+.additional-identification .feature-group-checkbox label {
+  display: inline-block; /* Make labels take up only their text width */
+  margin-left: 10px; 
+  /* white-space: nowrap;  */
+  /* vertical-align: -2px; */
+}
+
+.additional-identification .feature-group-checkbox input[type="checkbox"] {
+  /* flex-grow:inherit;  */
+  vertical-align: middle; /* Vertically align checkbox */
+  position: relative; /* Position checkbox relative */
+  top: -2px;
+}
+
+.leaf-color-label {
+  display: block; /* Make the label take the full width */
+  margin-bottom: 10px; /* Space between the label and the color picker */
+}
+
+.uppercase {
+  text-transform: uppercase; /* This will convert the text to uppercase */
+  /* Other existing styles */
+}
+
+.feature-group-color label {
+  margin-right: 10px; /* Add space between the label and the color picker */
+}

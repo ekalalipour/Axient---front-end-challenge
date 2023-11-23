@@ -1,0 +1,80 @@
+.welcome-screen {
+  max-width: 800px;
+  width: 500px; 
+  margin: 0 auto; 
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+}
+
+.header-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* display: flex;
+  align-items: center; 
+  padding: 10px;  */
+}
+
+.leaf-logo {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-right: 10px; 
+  padding-left: 10px;
+}
+
+.leaf-container {
+  height: 64px; /* Total height including padding */
+  background-color: var(--primary-bg-color); 
+  display: flex;
+  align-items: center; /* Centers the leaf logo vertically within the banner */
+  justify-content: start; /* Aligns the leaf logo to the start of the container */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 1.5rem;
+  margin-bottom: 48px;
+}
+
+.leaf-identification {
+  font-size: 1.25rem; /* 20px if 1rem is 16px */
+  line-height: 1.2;
+  color: var(--button-text-color);
+  background-color: var(--primary-bg-color);
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+}
+.button-container {
+  text-align: center;
+  justify-content: center;  
+  align-items: center;
+  margin-top: 0;
+}
+
+.get-started-btn {
+  text-align: center;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color); /* Green background for the button */
+  border: none; 
+  font-size: var(--font-size);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.grey-bar {
+  height: 3px; /* Adjust height as needed */
+  background-color: var(--grey-bar-color);
+  margin-bottom: 20px; 
+  margin-top: 0; /* If the space is already provided by .description's margin-bottom */
+}
+
+.magnifying-glass {
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+
+.description {
+  font-size: medium;
+  margin-top: 0; 
+  margin-bottom: 48px;
+}
+

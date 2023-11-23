@@ -1,0 +1,154 @@
+/* question.component.css */
+.question-screen {
+  max-width: 800px;
+  width: 500px; 
+  margin: 0 auto;
+}
+
+.header-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.leaf-logo {
+  padding: 1.5rem;
+  margin-right: 10px; 
+  padding-left: 10px;
+}
+
+.leaf-container {
+  height: 64px; /* Total height including padding */
+  background-color: var(--primary-bg-color);
+  display: flex;
+  align-items: center; /* Centers the leaf logo vertically within the banner */
+  justify-content: start; /* Aligns the leaf logo to the start of the container */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 1.5rem;
+  margin-bottom: 48px;
+}
+
+.leaf-identification {
+  font-size: 1.25rem; /* 20px if 1rem is 16px */
+  line-height: 1.2;
+  color: var(--button-text-color);
+  background-color: var(--primary-bg-color);
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+}
+
+.button-container {
+  display: flex;
+  justify-content:center;  
+  align-items: center;
+  padding: 20px 0;
+}
+
+.btn {
+  text-align: center;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  border: none; 
+  font-size: var(--font-size);
+  padding: 10px 23px;
+  border-radius: 10px;
+  margin: 0 10px; /* Space between buttons */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 50px;
+}
+
+.grey-bar {
+  height: 3px; /* Adjust height as needed */
+  background-color: var(--grey-bar-color);
+  margin-bottom: 5px;
+  margin-top: 48px; /* If the space is already provided by .description's margin-bottom */
+}
+
+.magnifying-glass {
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+
+.custom-radio input[type="radio"] {
+  opacity: 0; /* Hide the default radio button */
+  position: absolute; /* Take it out of document flow */
+  z-index: -1; /* Place it behind the label */
+}
+
+.radio-label {
+  background-image: url('../../assets/icons/radiobutton_off.svg'); /* Default/unchecked icon */
+  cursor: pointer;
+  line-height: 1.2;
+  color: var(--text-color);
+  padding-left: 20px; 
+  background-position: left center; 
+  padding-right: 10px; 
+  padding-left: 20px;  
+  font-size: 1.25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.radio-label {
+  display: inline-block;
+  width: 80px; 
+  text-align: left; 
+  padding-left: 30px;
+}
+
+
+.question-form fieldset {
+  text-align: center; 
+  margin-top: 48px;
+}
+
+
+.custom-radio:last-of-type {
+  margin-bottom: 30px; 
+}
+
+.custom-radio {
+  margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+.question-text-container {
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
+}
+
+/* When the radio button is checked, change the label's background image */
+.custom-radio input[type="radio"]:checked + .radio-label {
+  background-image: url('../../assets/icons/radiobutton_on.svg');
+}
+
+.button-icon {
+  height: 20px; /* Adjust the size as needed */
+  width: auto;
+}
+
+.button-icon.left {
+  margin-right: 10px; /* Space between the icon and the text */
+}
+
+.button-icon.right {
+  margin-left: 10px; /* Space between the text and the icon */
+  height: 40px;
+  position: relative;
+  right: -5px;
+}
+
+.btn-grey {
+  background-color: var(--grey-button); /* Grey background color */
+  color: var(--button-text-color); /* White text color */
+  /* Other styling properties similar to the .btn class */
+}
+
+.btn-primary {
+  /* Extra padding when the icon is not shown */
+  padding: 10px 20px 10px 30px; /* Adjust as necessary */
+}

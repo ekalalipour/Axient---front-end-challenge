@@ -1,0 +1,71 @@
+<article class="question-screen">
+  <header class="header-container">
+    <img src="../../assets/logos/data-entry-logo.png" alt="Data Entry Logo" class="Data-Entry-Logo">
+    <img src="../../assets/logos/mag-logo.png" alt="Magnifying Glass" class="magnifying-glass">
+  </header>
+  <section class="leaf-container">
+    <img src="../../assets/logos/leaf-icon.png" alt="Leaf Icon" class="leaf-logo">
+    <h1 class="leaf-identification">Leaf Identification Wizard</h1>
+  </section>
+  <div *ngIf="currentQuestion?.question; else loading" class="question-text-container">
+    <h2 class="question-text">{{ currentQuestion?.question }}</h2>
+  </div>
+  <div *ngIf="currentQuestion?.options" class="question-form">
+    <fieldset>
+      <legend class="sr-only"></legend>
+      <div *ngFor="let option of currentQuestion.options" class="custom-radio">
+        <!-- <input type="radio" [id]="option.type" name="questionOption" [(ngModel)]="selectedOption" [value]="option"> -->
+        <input type="radio" [id]="option.type" name="questionOption" [(ngModel)]="selectedOption" (change)="selectOption(option.type)" [value]="option">
+
+        <label [for]="option.type" class="radio-label">{{ option.type }}</label>
+      </div>
+    </fieldset>
+    <div class="grey-bar"></div>
+    <footer class="button-container">
+      <div class="grey-bar"></div>
+      <button type="button" class="btn btn-grey" (click)="goBack()">
+        <img src="../../assets/icons/blackcaratwhiteborder.svg" alt="Previous" class="button-icon left">Prev
+      </button>
+      <button type="button" class="btn btn-primary" (click)="clickNext()" [disabled]="isNextButtonDisabled">Next
+        <img *ngIf="showNextIcon" src="../../assets/icons/leaf_color_checkmark.svg" alt="Next" class="button-icon right">
+      </button>
+    </footer>
+  </div>
+</article>
+
+<ng-template #loading>
+  <p>Loading question...</p>
+</ng-template>
+
+
+
+<!-- <article class="question-screen">
+  <header class="header-container">
+    <img src="../../assets/logos/data-entry-logo.png" alt="Data Entry Logo" class="Data-Entry-Logo">
+    <img src="../../assets/logos/mag-logo.png" alt="Magnifying Glass" class="magnifying-glass">
+  </header>
+  <section class="leaf-container" *ngIf="currentQuestion?.question; else loading">
+    <img src="../../assets/logos/leaf-icon.png" alt="Leaf Icon" class="leaf-logo">
+    <h1 class="leaf-identification">{{ currentQuestion?.question }}</h1>
+  </section>
+  <div class="question-form" *ngIf="currentQuestion?.options">
+    <fieldset>
+      <div *ngFor="let option of currentQuestion.options; let i = index">
+        <input type="radio" id="option{{ i }}" name="questionOption" (change)="selectOption(option)">
+        <label for="option{{ i }}">{{ option.type }}</label>
+      </div>
+    </fieldset>
+    <footer class="button-container">
+      <div class="grey-bar"></div>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Prev</button>
+      <button type="button" class="btn btn-primary" (click)="clickNext()">Next</button>
+    </footer>
+  </div>
+</article>
+
+<ng-template #loading>
+  <p>Loading question...</p>
+</ng-template> -->
+
+
+

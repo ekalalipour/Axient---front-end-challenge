@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-bg-color: #3e9112; /* Green background color */
+  --button-bg-color: #3e9112; /* Green button color */
+  --text-color: #323232; /* Primary text color */
+  --button-text-color: #ffffff; /* Button text color */
+  --grey-bar-color: #d8dbdb; /* Grey bar color */
+  --font-size: 1.25rem;
+  --leaf-icon-height: 58px; /* Height for leaf icon */
+  --grey-background-color: #dbdbdb; /* Grey background color for the grey bar */
+  --grey-button: #6c6c6c;
+}
+
+
+
+
