@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
   styleUrl: './welcome.component.css'
 })
 export class WelcomeComponent {
+  // Constructor to inject the Router service
   constructor(private router: Router) {}
 
+  // Method to navigate to the question component when 'Get Started' is clicked
   getStarted() {
-    this.router.navigate(['/question', 1]); // Assuming you have parameterized routes for questions
+    // Navigate to the first question in the questionnaire
+    this.router.navigate(['/question', 1]); 
   }
 }

@@ -11,10 +11,10 @@ import { LeafDataService } from '../leaf-data.service';
 export class QuestionComponent implements OnInit {
   currentQuestion: any;
   selectedOption: any;
-  breadcrumb: any[] = [];
-  showNextIcon = false;
-  isNextButtonDisabled = true;
-  userJourney: { question: string, userResponse: string }[] = [];
+  breadcrumb: any[] = []; // Stores the history of questions for navigation
+  showNextIcon = false; // Controls visibility of next icon
+  isNextButtonDisabled = true; // Controls state of the Next button
+  userJourney: { question: string, userResponse: string }[] = []; // Records user's choices
 
   constructor(
     private http: HttpClient, 
@@ -23,6 +23,7 @@ export class QuestionComponent implements OnInit {
     ) {}
 
   ngOnInit() {
+    // Fetch the initial question data from JSON
     this.http.get('/assets/tree-data.json').subscribe({
       next: (data) => {
         console.log("Loaded data:", data);
@@ -39,10 +40,10 @@ export class QuestionComponent implements OnInit {
   }
 
   selectOption(optionValue: string) {
+    // Set the selected option and record the user's journey
     this.selectedOption = this.currentQuestion.options.find(
       (option: { type: string }) => option.type === optionValue
     );
-    // Record the question and user response
     this.userJourney.push({
       question: this.currentQuestion.question,
       userResponse: this.selectedOption.type
@@ -51,44 +52,22 @@ export class QuestionComponent implements OnInit {
     this.isNextButtonDisabled = false;
   }
   
-  
+  // Show and then hide the next icon
   handleNextIconDisplay() {
     this.showNextIcon = true;
     setTimeout(() => {
       this.showNextIcon = false;
-    }, 500); // Hide the icon after 1 second
+    }, 500); 
   }
 
   handleNextButtonState() {
     // Delay in disabling the Next button after it's clicked
     setTimeout(() => {
       this.isNextButtonDisabled = true;
-    }, 500); // Delay of 0.5 seconds
+    }, 500); 
   }
   
   
-  // clickNext() {
-  //   console.log('clickNext - Selected option:', this.selectedOption);
-  
-  //   if (this.selectedOption) {
-  //     if (this.selectedOption.question) {
-  //       // Handle navigating to the next question
-  //       this.breadcrumb.push(this.currentQuestion);
-  //       this.currentQuestion = this.selectedOption;
-  //       console.log('Navigating to next question:', this.currentQuestion);
-  //       this.handleNextIconDisplay();
-  //     } else {
-  //       // Handle selected leaf species
-  //       console.log('Selected species:', this.selectedOption.species, 'Image path:', this.selectedOption.img);
-  //       // Store the leaf data in the service and navigate to the result component
-  //       this.leafDataService.setLeafData(this.selectedOption.species, this.selectedOption.img);
-  //       this.router.navigate(['/result']);
-  //     }
-  //     this.handleNextButtonState();
-  //     this.selectedOption = null;
-  //   }
-  // }
-
   clickNext() {
     console.log('clickNext - Selected option:', this.selectedOption);
   
@@ -104,7 +83,7 @@ export class QuestionComponent implements OnInit {
         this.handleNextIconDisplay();
         this.handleNextButtonState();
       } else {
-        // Final identification: handle the case when a leaf species is identified
+        // Handle final leaf species identification
         console.log('Selected species:', this.selectedOption.species, 'Image path:', this.selectedOption.img);
         // Store the final identification in the service
         this.leafDataService.setLeafData(this.selectedOption.species, this.selectedOption.img);
@@ -113,12 +92,12 @@ export class QuestionComponent implements OnInit {
       this.selectedOption = null;
     } else {
       console.log('No option selected.');
-      // Handle lack of selection (e.g., show an alert to the user)
     }
   }
   
   
   goBack() {
+     // Handles the back navigation in the question flow
     if (this.breadcrumb.length > 0) {
       this.currentQuestion = this.breadcrumb.pop();
       this.selectedOption = null;

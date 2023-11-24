@@ -80,7 +80,7 @@
 }
 
 .leaf-identification {
-  font-size: 1.25rem; /* 20px if 1rem is 16px */
+  font-size: 1.25rem; 
   line-height: 1.2;
   color: var(--button-text-color);
   background-color: var(--primary-bg-color);
@@ -93,11 +93,10 @@
   margin-bottom: -10px;
 }
 
-/* Additional Leaf Details Section */
 .additional-identification {
   
   text-align: center;
-  font-size: var(--font-size); /* Assuming you have a font size variable */
+  font-size: var(--font-size);
   margin: 20px 0; /* Add some space below the section */
 }
 
@@ -129,7 +128,6 @@
 
 .uppercase {
   text-transform: uppercase; /* This will convert the text to uppercase */
-  /* Other existing styles */
 }
 
 .feature-group-color label {
@@ -139,7 +137,7 @@
 .texture-description {
   margin-top: 20px; /* Space above the texture description */
   text-align: center;
-  font-size: var(--font-size); /* Adjust font size as needed */
+  font-size: var(--font-size);
 }
 
 .feature-group-color {

@@ -5,29 +5,28 @@ import { LeafDataService } from '../leaf-data.service';
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
-  styleUrls: ['./result.component.css'] // Corrected from 'styleUrl' to 'styleUrls'
+  styleUrls: ['./result.component.css'] 
 })
 export class ResultComponent implements OnInit {
-  leafImage: string | undefined; // The filename of the leaf image
-  leafName: string | undefined;
-  userJourney: any[] = [];
-  leafTextures: string[] = ['Smooth', 'Rough', 'Hairy', 'Other'];
-  selectedTextures: string[] = [];
-  leafColor: string = '';
-  additionalFeatures: Record<string, boolean> = {};
+  leafImage: string | undefined; // Filename of the identified leaf image
+  leafName: string | undefined; // Name of the identified leaf
+  userJourney: any[] = []; // Stores the user's journey through the question process
+  leafTextures: string[] = ['Smooth', 'Rough', 'Hairy', 'Other']; // Options for leaf texture
+  selectedTextures: string[] = []; // Stores user-selected textures
+  leafColor: string = ''; // Stores user-selected leaf color
+  additionalFeatures: Record<string, boolean> = {}; // Tracks additional features selected by the user
 
   constructor(private router: Router, private leafDataService: LeafDataService) {}
 
   ngOnInit() {
+    // Retrieve leaf name, image, and user journey from the service
     this.leafName = this.leafDataService.getLeafName();
     this.leafImage = this.leafDataService.getLeafImage();
     this.userJourney = this.leafDataService.getUserJourney();
-    console.log('Result Page - User Journey:', this.userJourney);
   }
 
   restart() {
-    // Logic to restart the identification process
-    console.log('Restarting identification process...');
+    // Restart the identification process and navigate to the start page
     this.leafDataService.resetUserJourney(); // Reset the user journey
     this.router.navigate(['/']);
   }
@@ -42,7 +41,6 @@ export class ResultComponent implements OnInit {
     // Retrieve the leaf name and image path from the LeafDataService
     const leafName = this.leafDataService.getLeafName();
     const leafImage = this.leafDataService.getLeafImage();
-
     // Prepare the final submission JSON
     const finalSubmission = {
       leafIdentificationProcess: this.leafDataService.getUserJourney(),

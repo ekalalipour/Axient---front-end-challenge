@@ -14,9 +14,7 @@
     <fieldset>
       <legend class="sr-only"></legend>
       <div *ngFor="let option of currentQuestion.options" class="custom-radio">
-        <!-- <input type="radio" [id]="option.type" name="questionOption" [(ngModel)]="selectedOption" [value]="option"> -->
         <input type="radio" [id]="option.type" name="questionOption" [(ngModel)]="selectedOption" (change)="selectOption(option.type)" [value]="option">
-
         <label [for]="option.type" class="radio-label">{{ option.type }}</label>
       </div>
     </fieldset>

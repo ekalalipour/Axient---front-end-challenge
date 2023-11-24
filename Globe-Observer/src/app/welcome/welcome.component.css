@@ -33,7 +33,7 @@
 }
 
 .leaf-identification {
-  font-size: 1.25rem; /* 20px if 1rem is 16px */
+  font-size: 1.25rem; 
   line-height: 1.2;
   color: var(--button-text-color);
   background-color: var(--primary-bg-color);
@@ -61,10 +61,10 @@
 }
 
 .grey-bar {
-  height: 3px; /* Adjust height as needed */
+  height: 3px; 
   background-color: var(--grey-bar-color);
   margin-bottom: 20px; 
-  margin-top: 0; /* If the space is already provided by .description's margin-bottom */
+  margin-top: 0; 
 }
 
 .magnifying-glass {

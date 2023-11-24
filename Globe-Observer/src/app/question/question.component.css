@@ -61,10 +61,10 @@
 }
 
 .grey-bar {
-  height: 3px; /* Adjust height as needed */
+  height: 3px;
   background-color: var(--grey-bar-color);
   margin-bottom: 5px;
-  margin-top: 48px; /* If the space is already provided by .description's margin-bottom */
+  margin-top: 48px; 
 }
 
 .magnifying-glass {
@@ -73,9 +73,9 @@
 }
 
 .custom-radio input[type="radio"] {
-  opacity: 0; /* Hide the default radio button */
-  position: absolute; /* Take it out of document flow */
-  z-index: -1; /* Place it behind the label */
+  opacity: 0; 
+  position: absolute; 
+  z-index: -1; 
 }
 
 .radio-label {
@@ -127,7 +127,7 @@
 }
 
 .button-icon {
-  height: 20px; /* Adjust the size as needed */
+  height: 20px; 
   width: auto;
 }
 
@@ -145,12 +145,11 @@
 .btn-grey {
   background-color: var(--grey-button); /* Grey background color */
   color: var(--button-text-color); /* White text color */
-  /* Other styling properties similar to the .btn class */
 }
 
 .btn-primary {
   /* Extra padding when the icon is not shown */
-  padding: 10px 20px 10px 30px; /* Adjust as necessary */
+  padding: 10px 20px 10px 30px; 
 }
 
 @media (max-width: 800px) {
